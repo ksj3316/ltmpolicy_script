@@ -61,6 +61,12 @@ findingLTMPolicy(){
 						}')
 			
 		# policies가 없을 시 해당 문구 출력
+  
+  		# 권혁진 수정 권고
+    		# virtualServer=(echo "$vs" | cut -d ' ' -f 3)
+		# ltmPolicyList=(tmsh list ltm virtual $virtualServer policies |grep policies | cut -d ' ' -f 6)
+		# 참고용
+    
         if [ "$ltmPolicyName" == "$wordCount" ]; then
 			echo "No LTM Policy"
 			exit 0
