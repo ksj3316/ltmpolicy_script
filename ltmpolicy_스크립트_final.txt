@@ -16,6 +16,7 @@ findingLTMPolicy(){
 		portNum="$2"
 		portNumTCP="$2/tcp"
 		portName=$(awk -v p=$portNumTCP '$2 == p {print $1}' /etc/services)
+		# port 번호에 따로 name이 있지 않은 경우 ex) 3.3.3.3:11443
 		if [ -z "$portName" ]; then
 			d="$1:$portNum"
 		else
