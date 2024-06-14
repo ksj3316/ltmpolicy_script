@@ -62,6 +62,7 @@ certificationExpirationCheck(){
 }
 
 # 로그를 수집 (gz 압축 해제 파일 포함) 하여 하나의 log 파일로 집합
+# notice, info 로그는 제외
 # 해제한 gz파일 재 압축
 combineLog(){
 	echo "------------log------------"
